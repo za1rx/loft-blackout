@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$orangeColor1: #ff9300;
+$orangeColor2: #ed6f2d;
+$grayColor1: #222;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@import 'hero', 'for-whom', 'they-trust-us', 'reviews', 'lofts', 'advantages', 'corporate-reviews', 'why-us', 'faq', 'contacts';

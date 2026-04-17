@@ -1,0 +1,125 @@
+
+.hero-section {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/image-bg.webp");
+  background-position: center;
+  // background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding-top: 8%;
+  padding-bottom: 5%;
+
+  .hero-section__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-section__title {
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      background-image: linear-gradient(to right, #ff9300, #ed6f2d);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+  }
+
+  .hero-section__subtitle {
+    color: #c9c9c9;
+    text-align: center;
+    margin-top: 0.7rem;
+
+    span {
+      border-bottom: 1px solid red;
+    }
+  }
+
+  .hero-section__list {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 1rem;
+    width: 75%;
+
+    .hero-section__list-item {
+      box-shadow: 0px 0px 10px 1px $orangeColor1;
+      border: 1px solid $orangeColor1;
+      backdrop-filter: blur(3px);
+      color: #fff;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 0;
+      width: 100%;
+      border-radius: 15px;
+      transition: 0.5s;
+      text-align: center;
+
+      img {
+        width: 45px;
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 25px 1px $orangeColor1;
+      }
+    }
+  }
+
+  .hero-section__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    button {
+      color: #fff;
+      border: none;
+      outline: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 1.4rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .hero-section__first-button {
+      background-image: linear-gradient(to right, $orangeColor1, $orangeColor2);
+    }
+
+    .hero-section__second-button {
+      background-color: transparent;
+      border: 1px solid #fff;
+    }
+  }
+}
+
+@media (max-width: 1750px) {
+    .hero-section .hero-section__list{
+        width: 95%;
+    }
+}
+
+@media (max-width: 765px) {
+    .hero-section .hero-section__list{
+        flex-direction: column;
+    }
+
+    .hero-section .hero-section__buttons{
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .hero-section .hero-section__title{
+        font-size: 30px;
+    }
+}

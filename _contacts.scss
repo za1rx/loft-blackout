@@ -1,0 +1,93 @@
+.contacts {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5%;
+}
+
+.contacts__title{
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 2em;
+}
+
+.contacts__content, .contacts__content a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.contacts-wrapper{
+    width: 75%;
+    display: flex;
+    align-items: center;
+}
+
+.contacts__content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contacts__map{
+    width: 40%;
+}
+
+.contacts__content_team-name{
+    font-size: 1.3rem;
+}
+
+.contacts__content_phone, .contacts__content_mail{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.contacts__content{
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__content_links {
+  display: flex;
+  gap: 0.8rem;
+  cursor: pointer;
+
+  li {
+    border: 1px solid #fff;
+    padding: 0.3rem;
+    max-height: 24px;
+    border-radius: .3rem;
+
+    img {
+      width: 24px;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+    .contacts__map{
+        width: 50%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .contacts-wrapper{
+        width: 95%;
+    }
+}
+
+@media (max-width: 780px) {
+    .contacts-wrapper{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contacts__title{
+        margin-bottom: 1rem;
+    }
+
+    .contacts__content, .contacts__map{
+        width: 100%;
+    }
+}

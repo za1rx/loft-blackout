@@ -1,0 +1,237 @@
+.lofts {
+  background-color: $grayColor1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2% 4%;
+}
+
+.lofts__bullets {
+  align-self: flex-start;
+  display: flex;
+  gap: 1rem;
+
+  button{
+    color: #fff;
+    transition: .5s;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+
+    &:hover{
+      color: $orangeColor2;
+    }
+  }
+}
+
+.lofts__content {
+  width: 65%;
+  margin-top: 2rem;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  #s-verandoy, #na-krishe, #bolshie-zali{
+    display: none;
+  }
+}
+
+.lofts__item {
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  .lofts__item_title {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 240px;
+    position: relative;
+
+    h3 {
+      position: absolute;
+      bottom: 7%;
+      left: 3%;
+      color: #fff;
+      z-index: 100;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 100px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(36, 36, 36, 0),
+        #000000
+      );
+    }
+  }
+  .reviews-counter {
+    background-color: $grayColor1;
+    display: flex;
+    gap: 0.2rem;
+    padding: 0.4rem 0.5rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 4%;
+    right: 3%;
+    color: #fff;
+
+    img {
+      width: 20px;
+    }
+  }
+}
+
+.lofts__item_info {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    color: #fff;
+    img {
+      width: 24px;
+    }
+  }
+
+  .lofts__item_info--peoples, .lofts__item_info--rules {
+    width: 25%;
+    text-align: center;
+  }
+
+  .lofts__item_info--metro{
+    width: 50%;
+    text-align: center;
+  }
+}
+
+.lofts__item_price {
+  color: #fff;
+  font-weight: 600;
+  padding: 1rem;
+
+  .weekend,
+  .budni {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .weekend {
+    margin-top: 1rem;
+
+    span {
+      color: $orangeColor2;
+    }
+  }
+}
+
+.lofts__item_buttons {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  button {
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 0.6rem;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  button:first-of-type {
+    border: 1px solid #333;
+    border-radius: 0.2rem;
+    background-color: transparent;
+  }
+
+  button:last-of-type{
+    background-image: linear-gradient(to right, $orangeColor1, $orangeColor2);
+    border-radius: 1.4rem;
+  }
+}
+
+.lofts__gift{
+  text-decoration: none;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+@media (max-width: 1560px) {
+  .lofts__content{
+    width: 78%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .lofts__content{
+    width: 90%;
+  }
+
+  .lofts__item .lofts__item_title h3{
+    font-size: 1rem;
+  }
+
+  .lofts__item_info {
+    .lofts__item_info--peoples, .lofts__item_info--rules, .lofts__item_info--metro{
+      font-size: .85rem;
+    }
+  }
+}
+
+@media (max-width: 1110px) {
+  .lofts__content{
+    width: 95%;
+
+    ul{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .lofts__gift{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 710px) {
+  .lofts__content{
+    width: 95%;
+
+    ul{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .lofts__item_buttons button{
+    font-size: 1rem;
+  }
+
+  .lofts__bullets button{
+    font-size: .8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .lofts__bullets button{
+    font-size: .75rem;
+  }
+}

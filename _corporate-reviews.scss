@@ -1,0 +1,156 @@
+.corporate-reviews, .reviews-about-loft {
+  background-color: #111;
+  padding: 4%;
+
+  position: relative;
+}
+
+.corporate-reviews-swiper, .reviews-about-loft-swiper {
+  width: 60%;
+}
+
+.corporate-reviews-slide {
+  background-color: $grayColor1;
+  border-radius: 2rem;
+  color: #fff;
+  width: 100px;
+
+  .corporate-reviews-slide__wrapper {
+    padding: 3rem 3rem;
+  }
+
+  img {
+    width: 55px;
+    border-radius: 50%;
+  }
+}
+
+.corporate-reviews__title {
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.corporate-reviews button, .reviews-about-loft button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+
+  &.button-prev {
+    top: 45%;
+    left: 20%;
+  }
+
+  &.button-next {
+    top: 45%;
+    right: 20%;
+  }
+
+  &.button-prev img {
+    transform: rotate(180deg);
+  }
+
+  img {
+    width: 18px;
+  }
+}
+
+.reviews-about-loft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-about-loft__link{
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 1rem 1.2rem;
+    margin-top: 4rem;
+    border-radius: .5rem;
+}
+
+.corporate-reviews-slide__wrapper p{
+    margin-bottom: 2rem;
+}
+
+.corporate-reviews-slide__wrapper a{
+    color: #66768e;
+    font-style: italic;
+}
+
+.corporate-reviews-slide__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .stars img{
+        width: 18px;
+    }
+}
+
+@media (max-width: 1260px) {
+  .corporate-reviews__title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .corporate-reviews__title {
+    font-size: 1.4rem;
+  }
+  .corporate-reviews-swiper, .reviews-about-loft-swiper {
+    width: 75%;
+  }
+
+  .corporate-reviews button, .reviews-about-loft button {
+    &.button-next {
+      right: 10%;
+    }
+
+    &.button-prev {
+      left: 10%;
+    }
+  }
+
+  .corporate-reviews-slide .corporate-reviews-slide__wrapper {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .corporate-reviews__title {
+    font-size: 1.1rem;
+  }
+
+  .reviews-about-loft__link{
+    font-size: .9rem;
+  }
+
+  .corporate-reviews-swiper, .reviews-about-loft-swiper {
+    width: 90%;
+  }
+
+  .corporate-reviews button, .reviews-about-loft button {
+    &.button-next {
+      right: 2%;
+    }
+
+    &.button-prev {
+      left: 2%;
+    }
+  }
+
+  .corporate-reviews-slide {
+    font-size: 0.8rem;
+
+    .corporate-reviews-slide__wrapper {
+      padding: 2rem 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.reviews{
+    padding: 5% 0 !important;
+    padding-bottom: 2% !important;
+    background-color: #111;
+}
+
+.swiper {
+  width: 100%;
+
+  img{
+    width: 300px;
+  }
+}
+
+.reviews-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
