@@ -1,8 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "Montserrat-500";
+  src: url("./fonts/Montserrat/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "Montserrat-600";
+  src: url("./fonts/Montserrat/Montserrat-SemiBold.ttf");
+}
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat-500";
 }
 
 ul {
@@ -56,7 +63,6 @@ ul {
   border: 1px solid #ff9300;
   backdrop-filter: blur(3px);
   color: #fff;
-  font-weight: 600;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -69,6 +75,9 @@ ul {
 }
 .hero-section .hero-section__list .hero-section__list-item img {
   width: 45px;
+}
+.hero-section .hero-section__list .hero-section__list-item p {
+  font-family: "Montserrat-600";
 }
 .hero-section .hero-section__list .hero-section__list-item:hover {
   box-shadow: 0px 0px 25px 1px #ff9300;
@@ -86,7 +95,7 @@ ul {
   padding: 1rem 2rem;
   font-size: 1rem;
   border-radius: 1.4rem;
-  font-weight: 600;
+  font-family: "Montserrat-600";
   cursor: pointer;
 }
 .hero-section .hero-section__buttons .hero-section__first-button {
@@ -196,7 +205,7 @@ ul {
   color: #fff;
   font-size: 36px;
   text-align: center;
-  font-weight: 600;
+  font-family: "Montserrat-600";
   margin-bottom: 3rem;
 }
 
@@ -415,7 +424,7 @@ ul {
 
 .lofts__item_price {
   color: #fff;
-  font-weight: 600;
+  font-family: "Montserrat-600";
   padding: 1rem;
 }
 .lofts__item_price .weekend,
@@ -458,7 +467,7 @@ ul {
   text-decoration: none;
   color: #fff;
   font-size: 3rem;
-  font-weight: 600;
+  font-family: "Montserrat-600";
   margin-top: 5rem;
   text-align: center;
 }
@@ -539,7 +548,7 @@ ul {
 .advantages__item h3 {
   color: #fff;
   font-size: 1.85rem;
-  font-weight: 600;
+  font-family: "Montserrat-600";
   text-align: center;
 }
 .advantages__item p {
@@ -795,7 +804,7 @@ ul {
 .faq__subtitle {
   color: #66768e;
   text-align: center;
-  font-weight: 600;
+  font-family: "Montserrat-600";
 }
 
 .accordion__list {
@@ -933,11 +942,12 @@ ul {
 
 .contacts__content_team-name {
   font-size: 1.3rem;
+  font-family: "Montserrat-500";
 }
 
 .contacts__content_phone, .contacts__content_mail {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-family: "Montserrat-600";
 }
 
 .contacts__content {
