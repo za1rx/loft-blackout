@@ -18,7 +18,7 @@ const slider1 = new MiniSwiper(document.getElementById("slider1"), {
 
 const slider2 = new MiniSwiper(document.getElementById("slider2"), {
   loop: true,
-  autoplay: false,
+  autoplay: true,
   autoplayDelay: 2000,
   spaceBetween: 10,
   slidesToShow: 1,
