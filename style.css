@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Montserrat-500";
   src: url("./fonts/Montserrat/Montserrat-Medium.ttf");
@@ -296,23 +297,8 @@ ul {
     font-size: 0.8rem;
   }
 }
-.reviews {
-  padding: 5% 0 !important;
-  padding-bottom: 2% !important;
-  background-color: #111;
-}
-
-.swiper {
-  width: 100%;
-}
-.swiper img {
-  width: 300px;
-}
-
-.reviews-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.reviews-slider {
+  background: #111;
 }
 
 .lofts {
@@ -574,13 +560,46 @@ ul {
     border: none;
   }
 }
-.corporate-reviews, .reviews-about-loft {
+.corporate-reviews,
+.reviews-about-loft {
   background-color: #111;
   padding: 4%;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.corporate-reviews-swiper, .reviews-about-loft-swiper {
+.corporate-reviews-slide__header h3 {
+  color: #fff;
+}
+
+.corporate-reviews-slider .text {
+  margin-bottom: 2rem;
+}
+.corporate-reviews-slider a {
+  color: #66768e;
+  font-style: italic;
+}
+
+.corporate-reviews-slider {
+  width: 60%;
+}
+.corporate-reviews-slider .slide__wrapper {
+  background: #222;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+.corporate-reviews-slider .slide__wrapper img {
+  width: 55px;
+  border-radius: 50%;
+}
+.corporate-reviews-slider .slide__wrapper p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.corporate-reviews-swiper,
+.reviews-about-loft-swiper {
   width: 60%;
 }
 
@@ -605,25 +624,30 @@ ul {
   margin-bottom: 1rem;
 }
 
-.corporate-reviews button, .reviews-about-loft button {
+.corporate-reviews button,
+.reviews-about-loft button {
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
   position: absolute;
 }
-.corporate-reviews button.button-prev, .reviews-about-loft button.button-prev {
+.corporate-reviews button.button-prev,
+.reviews-about-loft button.button-prev {
   top: 45%;
   left: 20%;
 }
-.corporate-reviews button.button-next, .reviews-about-loft button.button-next {
+.corporate-reviews button.button-next,
+.reviews-about-loft button.button-next {
   top: 45%;
   right: 20%;
 }
-.corporate-reviews button.button-prev img, .reviews-about-loft button.button-prev img {
+.corporate-reviews button.button-prev img,
+.reviews-about-loft button.button-prev img {
   transform: rotate(180deg);
 }
-.corporate-reviews button img, .reviews-about-loft button img {
+.corporate-reviews button img,
+.reviews-about-loft button img {
   width: 18px;
 }
 
@@ -671,13 +695,19 @@ ul {
   .corporate-reviews__title {
     font-size: 1.4rem;
   }
-  .corporate-reviews-swiper, .reviews-about-loft-swiper {
+  .corporate-reviews-swiper,
+  .reviews-about-loft-swiper {
     width: 75%;
   }
-  .corporate-reviews button.button-next, .reviews-about-loft button.button-next {
+  .corporate-reviews-slider {
+    width: 75%;
+  }
+  .corporate-reviews button.button-next,
+  .reviews-about-loft button.button-next {
     right: 10%;
   }
-  .corporate-reviews button.button-prev, .reviews-about-loft button.button-prev {
+  .corporate-reviews button.button-prev,
+  .reviews-about-loft button.button-prev {
     left: 10%;
   }
   .corporate-reviews-slide .corporate-reviews-slide__wrapper {
@@ -691,13 +721,19 @@ ul {
   .reviews-about-loft__link {
     font-size: 0.9rem;
   }
-  .corporate-reviews-swiper, .reviews-about-loft-swiper {
+  .corporate-reviews-swiper,
+  .reviews-about-loft-swiper {
     width: 90%;
   }
-  .corporate-reviews button.button-next, .reviews-about-loft button.button-next {
+  .corporate-reviews-slider {
+    width: 90%;
+  }
+  .corporate-reviews button.button-next,
+  .reviews-about-loft button.button-next {
     right: 2%;
   }
-  .corporate-reviews button.button-prev, .reviews-about-loft button.button-prev {
+  .corporate-reviews button.button-prev,
+  .reviews-about-loft button.button-prev {
     left: 2%;
   }
   .corporate-reviews-slide {
@@ -991,4 +1027,68 @@ ul {
   .contacts__content, .contacts__map {
     width: 100%;
   }
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  cursor: grab;
+}
+.slider * {
+  -webkit-user-select: none; /* Safari */ /* IE 10+ и Edge */
+  -moz-user-select: none;
+       user-select: none;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide img {
+  width: 70%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+/* Кнопки */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.slider-track {
+  display: flex;
+  will-change: transform;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  will-change: transform;
 }/*# sourceMappingURL=style.css.map */
